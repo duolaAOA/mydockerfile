@@ -1,0 +1,40 @@
+version: '3.0'
+services:
+
+  rabbitmq:
+    image: rabbitmq:3.6.6-management
+    environment:
+      RABBITMQ_DEFAULT_USER: ${rabbitmq_username}
+      RABBITMQ_DEFAULT_PASS: ${rabbitmq_password}
+    ports:
+      - "5672:5672"
+    restart: always
+
+  elasticsearch:
+    image: registry.k8s.xxx.com/elasticsearch:5.6.10
+    ports:
+      - "9200:9200"
+    volumes:
+      - elasticsearch:/usr/share/elasticsearch/data:rw
+      - $PWD/readonlyrest.yml:/usr/share/elasticsearch/config/readonlyrest.yml
+    restart: always
+
+  influxdb:
+    image: influxdb
+    environment:
+      INFLUXDB_DB: "telegraf"
+      INFLUXDB_BIND_ADDRESS: "0.0.0.0:8088"
+      INFLUXDB_ADMIN_USER: ${influxdb_admin_user}
+      INFLUXDB_ADMIN_PASSWORD: ${influxdb_admin_password}
+      INFLUXDB_HTTP_AUTH_ENABLED: "true"
+      INFLUXDB_ADMIN_ENABLED: "true"
+    ports:
+      - 8086:8086
+    volumes:
+      - influxdb:/var/lib/influxdb
+    restart: always
+
+
+volumes:
+  elasticsearch: {}
+  influxdb: {}

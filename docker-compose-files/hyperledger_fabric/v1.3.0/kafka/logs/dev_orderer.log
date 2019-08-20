@@ -1,0 +1,143 @@
+[34m2018-12-19 08:25:10.521 UTC [localconfig] completeInitialization -> INFO 001[0m Kafka.Version unset, setting to 0.10.2.0
+[34m[002 12-19 08:25:10.72 UTC] [%{longpkg}] %{callpath} -> INFO[0m Orderer config values:
+	General.LedgerType = "file"
+	General.ListenAddress = "0.0.0.0"
+	General.ListenPort = 7050
+	General.TLS.Enabled = true
+	General.TLS.PrivateKey = "/var/hyperledger/orderer/tls/server.key"
+	General.TLS.Certificate = "/var/hyperledger/orderer/tls/server.crt"
+	General.TLS.RootCAs = [/var/hyperledger/orderer/tls/ca.crt]
+	General.TLS.ClientAuthRequired = false
+	General.TLS.ClientRootCAs = []
+	General.Keepalive.ServerMinInterval = 1m0s
+	General.Keepalive.ServerInterval = 2h0m0s
+	General.Keepalive.ServerTimeout = 20s
+	General.GenesisMethod = "file"
+	General.GenesisProfile = "SampleInsecureSolo"
+	General.SystemChannel = "test-system-channel-name"
+	General.GenesisFile = "/var/hyperledger/orderer/orderer.genesis.block"
+	General.Profile.Enabled = false
+	General.Profile.Address = "0.0.0.0:6060"
+	General.LogLevel = "INFO"
+	General.LogFormat = "%{color}[%{id:03x} %{time:01-02 15:04:05.00 MST}] [%{longpkg}] %{callpath} -> %{level:.4s}%{color:reset} %{message}"
+	General.LocalMSPDir = "/var/hyperledger/orderer/msp"
+	General.LocalMSPID = "OrdererMSP"
+	General.BCCSP.ProviderName = "SW"
+	General.BCCSP.SwOpts.SecLevel = 256
+	General.BCCSP.SwOpts.HashFamily = "SHA2"
+	General.BCCSP.SwOpts.Ephemeral = false
+	General.BCCSP.SwOpts.FileKeystore.KeyStorePath = "/var/hyperledger/orderer/msp/keystore"
+	General.BCCSP.SwOpts.DummyKeystore =
+	General.BCCSP.PluginOpts =
+	General.Authentication.TimeWindow = 15m0s
+	FileLedger.Location = "/var/hyperledger/production/orderer"
+	FileLedger.Prefix = "hyperledger-fabric-ordererledger"
+	RAMLedger.HistorySize = 1000
+	Kafka.Retry.ShortInterval = 1s
+	Kafka.Retry.ShortTotal = 30s
+	Kafka.Retry.LongInterval = 5m0s
+	Kafka.Retry.LongTotal = 12h0m0s
+	Kafka.Retry.NetworkTimeouts.DialTimeout = 10s
+	Kafka.Retry.NetworkTimeouts.ReadTimeout = 10s
+	Kafka.Retry.NetworkTimeouts.WriteTimeout = 10s
+	Kafka.Retry.Metadata.RetryMax = 3
+	Kafka.Retry.Metadata.RetryBackoff = 250ms
+	Kafka.Retry.Producer.RetryMax = 3
+	Kafka.Retry.Producer.RetryBackoff = 100ms
+	Kafka.Retry.Consumer.RetryBackoff = 2s
+	Kafka.Verbose = true
+	Kafka.Version = 0.10.2.0
+	Kafka.TLS.Enabled = false
+	Kafka.TLS.PrivateKey = ""
+	Kafka.TLS.Certificate = ""
+	Kafka.TLS.RootCAs = []
+	Kafka.TLS.ClientAuthRequired = false
+	Kafka.TLS.ClientRootCAs = []
+	Kafka.SASLPlain.Enabled = false
+	Kafka.SASLPlain.User = ""
+	Kafka.SASLPlain.Password = ""
+	Kafka.Topic.ReplicationFactor = 3
+	Debug.BroadcastTraceDir = ""
+	Debug.DeliverTraceDir = ""
+[34m[003 12-19 08:25:10.75 UTC] [%{longpkg}] %{callpath} -> INFO[0m Starting orderer with TLS enabled
+[34m[004 12-19 08:25:10.81 UTC] [%{longpkg}] %{callpath} -> INFO[0m Getting block information from block storage
+[34m[005 12-19 08:25:10.86 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: testchainid] Starting chain with last persisted offset -3 and last recorded block 0
+[34m[006 12-19 08:25:10.87 UTC] [%{longpkg}] %{callpath} -> INFO[0m Starting system channel 'testchainid' with genesis block hash 81e093d292b38b17f8fa6e32c5903bcb150a0e265b54b6841f9aac8a34137090 and orderer type kafka
+[34m[007 12-19 08:25:10.87 UTC] [%{longpkg}] %{callpath} -> INFO[0m Starting orderer:
+ Version: 1.3.0
+ Commit SHA: development build
+ Go version: go1.10.4
+ OS/Arch: linux/amd64
+ Experimental features: true
+[34m[008 12-19 08:25:10.87 UTC] [%{longpkg}] %{callpath} -> INFO[0m Beginning to serve requests
+[34m[009 12-19 08:25:10.87 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: testchainid] Setting up the topic for this channel...
+[34m[00a 12-19 08:25:30.57 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: testchainid] Setting up the producer for this channel...
+[34m[00b 12-19 08:25:30.89 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: testchainid] Producer set up successfully
+[34m[00c 12-19 08:25:30.89 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: testchainid] About to post the CONNECT message...
+[34m[00d 12-19 08:25:32.59 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: testchainid] CONNECT message posted successfully
+[34m[00e 12-19 08:25:32.59 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: testchainid] Setting up the parent consumer for this channel...
+[34m[00f 12-19 08:25:32.67 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: testchainid] Parent consumer set up successfully
+[34m[010 12-19 08:25:32.67 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: testchainid] Setting up the channel consumer for this channel (start offset: -2)...
+[34m[011 12-19 08:25:32.72 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: testchainid] Channel consumer set up successfully
+[34m[012 12-19 08:25:32.72 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: testchainid] Start phase completed successfully
+[34m[013 12-19 08:25:43.89 UTC] [%{longpkg}] %{callpath} -> INFO[0m Getting block information from block storage
+[34m[014 12-19 08:25:43.91 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: businesschannel] Starting chain with last persisted offset -3 and last recorded block 0
+[34m[015 12-19 08:25:43.91 UTC] [%{longpkg}] %{callpath} -> INFO[0m Created and starting new chain businesschannel
+[34m[016 12-19 08:25:43.91 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: businesschannel] Setting up the topic for this channel...
+[33m[017 12-19 08:25:43.92 UTC] [%{longpkg}] %{callpath} -> WARN[0m [channel: businesschannel] Rejecting deliver request for 172.18.0.5:45862 because of consenter error
+[34m[018 12-19 08:25:44.03 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: businesschannel] Setting up the producer for this channel...
+[33m[019 12-19 08:25:44.16 UTC] [%{longpkg}] %{callpath} -> WARN[0m [channel: businesschannel] Rejecting deliver request for 172.18.0.5:45868 because of consenter error
+[34m[01a 12-19 08:25:44.34 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: businesschannel] Producer set up successfully
+[34m[01b 12-19 08:25:44.34 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: businesschannel] About to post the CONNECT message...
+[33m[01c 12-19 08:25:44.37 UTC] [%{longpkg}] %{callpath} -> WARN[0m [channel: businesschannel] Rejecting deliver request for 172.18.0.5:45876 because of consenter error
+[33m[01d 12-19 08:25:44.59 UTC] [%{longpkg}] %{callpath} -> WARN[0m [channel: businesschannel] Rejecting deliver request for 172.18.0.5:45878 because of consenter error
+[33m[01e 12-19 08:25:44.81 UTC] [%{longpkg}] %{callpath} -> WARN[0m [channel: businesschannel] Rejecting deliver request for 172.18.0.5:45884 because of consenter error
+[33m[01f 12-19 08:25:45.03 UTC] [%{longpkg}] %{callpath} -> WARN[0m [channel: businesschannel] Rejecting deliver request for 172.18.0.5:45886 because of consenter error
+[33m[020 12-19 08:25:45.25 UTC] [%{longpkg}] %{callpath} -> WARN[0m [channel: businesschannel] Rejecting deliver request for 172.18.0.5:45888 because of consenter error
+[33m[021 12-19 08:25:45.47 UTC] [%{longpkg}] %{callpath} -> WARN[0m [channel: businesschannel] Rejecting deliver request for 172.18.0.5:45892 because of consenter error
+[34m[022 12-19 08:25:45.50 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: businesschannel] CONNECT message posted successfully
+[34m[023 12-19 08:25:45.50 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: businesschannel] Setting up the parent consumer for this channel...
+[34m[024 12-19 08:25:45.51 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: businesschannel] Parent consumer set up successfully
+[34m[025 12-19 08:25:45.51 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: businesschannel] Setting up the channel consumer for this channel (start offset: -2)...
+[34m[026 12-19 08:25:45.53 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: businesschannel] Channel consumer set up successfully
+[34m[027 12-19 08:25:45.53 UTC] [%{longpkg}] %{callpath} -> INFO[0m [channel: businesschannel] Start phase completed successfully
+[33m[028 12-19 08:25:50.32 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:45932: rpc error: code = Canceled desc = context canceled
+[33m[029 12-19 08:25:50.32 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:45930: rpc error: code = Canceled desc = context canceled
+[33m[02a 12-19 08:25:52.67 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:45940: rpc error: code = Canceled desc = context canceled
+[33m[02b 12-19 08:25:52.67 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:45938: rpc error: code = Canceled desc = context canceled
+[33m[02c 12-19 08:26:43.70 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46000: rpc error: code = Canceled desc = context canceled
+[33m[02d 12-19 08:27:26.57 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46018: rpc error: code = Canceled desc = context canceled
+[33m[02e 12-19 08:27:29.35 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46032: rpc error: code = Canceled desc = context canceled
+[33m[02f 12-19 08:27:35.84 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46082: rpc error: code = Canceled desc = context canceled
+[33m[030 12-19 08:27:36.20 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46084: rpc error: code = Canceled desc = context canceled
+[33m[031 12-19 08:27:36.42 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46086: rpc error: code = Canceled desc = context canceled
+[33m[032 12-19 08:27:36.66 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46088: rpc error: code = Canceled desc = context canceled
+[33m[033 12-19 08:27:36.93 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46090: rpc error: code = Canceled desc = context canceled
+[33m[034 12-19 08:27:37.16 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46092: rpc error: code = Canceled desc = context canceled
+[33m[035 12-19 08:27:37.36 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46094: rpc error: code = Canceled desc = context canceled
+[33m[036 12-19 08:27:37.59 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46096: rpc error: code = Canceled desc = context canceled
+[33m[037 12-19 08:27:37.84 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46098: rpc error: code = Canceled desc = context canceled
+[33m[038 12-19 08:27:38.06 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46100: rpc error: code = Canceled desc = context canceled
+[33m[039 12-19 08:27:38.23 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46102: rpc error: code = Canceled desc = context canceled
+[33m[03a 12-19 08:27:38.49 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46104: rpc error: code = Canceled desc = context canceled
+[33m[03b 12-19 08:27:48.57 UTC] [%{longpkg}] %{callpath} -> WARN[0m De-duplicating identity 0a074f7267314d535012aa062d2d2d2d2d424547494e2043455254494649434154452d2d2d2d2d0a4d4949434b6a43434164436741774942416749515466737132677a384e6f5741315a6d5a615a396f6f6a414b42676771686b6a4f50515144416a427a4d5173770a435159445651514745774a56557a45544d4245474131554543424d4b5132467361575a76636d3570595445574d4251474131554542784d4e5532467549455a790a5957356a61584e6a627a455a4d4263474131554543684d5162334a6e4d53356c654746746347786c4c6d4e76625445634d426f474131554541784d54593245750a62334a6e4d53356c654746746347786c4c6d4e7662544165467730784f4445794d546b774f4445324d444261467730794f4445794d5459774f4445324d4442610a4d477778437a414a42674e5642415954416c56544d524d77455159445651514945777044595778705a6d3979626d6c684d5259774641594456515148457731540a59573467526e4a68626d4e7063324e764d513877445159445651514c45775a6a62476c6c626e5178487a416442674e5642414d4d466b466b62576c75514739790a5a7a45755a586868625842735a53356a623230775754415442676371686b6a4f5051494242676771686b6a4f50514d4242774e43414154552b553950474f78480a636b585772723649773174423350656f466a5a3457335257772b76554638315036367871677a676f67616431384f314a59306e464f31734737564830754632360a727a365a78474a75354356486f303077537a414f42674e56485138424166384542414d434234417744415944565230544151482f424149774144417242674e560a48534d454a4441696743414a59542f41317a304d653172754a4639626a516a7754655a7943416b4e6c354f5172424e47544f34566444414b42676771686b6a4f0a5051514441674e4941444246416945413952516646343261334f505464374d68354f78707251685935657164364f4c38314d6c577a706d7469775943494750350a584b6e39695a745039656a7a4f384a38566d496c4d504e33653173614d75772b66396a4964722f500a2d2d2d2d2d454e442043455254494649434154452d2d2d2d2d0a at index 2 in signature set
+[33m[03c 12-19 08:27:48.57 UTC] [%{longpkg}] %{callpath} -> WARN[0m De-duplicating identity 0a074f7267314d535012aa062d2d2d2d2d424547494e2043455254494649434154452d2d2d2d2d0a4d4949434b6a43434164436741774942416749515466737132677a384e6f5741315a6d5a615a396f6f6a414b42676771686b6a4f50515144416a427a4d5173770a435159445651514745774a56557a45544d4245474131554543424d4b5132467361575a76636d3570595445574d4251474131554542784d4e5532467549455a790a5957356a61584e6a627a455a4d4263474131554543684d5162334a6e4d53356c654746746347786c4c6d4e76625445634d426f474131554541784d54593245750a62334a6e4d53356c654746746347786c4c6d4e7662544165467730784f4445794d546b774f4445324d444261467730794f4445794d5459774f4445324d4442610a4d477778437a414a42674e5642415954416c56544d524d77455159445651514945777044595778705a6d3979626d6c684d5259774641594456515148457731540a59573467526e4a68626d4e7063324e764d513877445159445651514c45775a6a62476c6c626e5178487a416442674e5642414d4d466b466b62576c75514739790a5a7a45755a586868625842735a53356a623230775754415442676371686b6a4f5051494242676771686b6a4f50514d4242774e43414154552b553950474f78480a636b585772723649773174423350656f466a5a3457335257772b76554638315036367871677a676f67616431384f314a59306e464f31734737564830754632360a727a365a78474a75354356486f303077537a414f42674e56485138424166384542414d434234417744415944565230544151482f424149774144417242674e560a48534d454a4441696743414a59542f41317a304d653172754a4639626a516a7754655a7943416b4e6c354f5172424e47544f34566444414b42676771686b6a4f0a5051514441674e4941444246416945413952516646343261334f505464374d68354f78707251685935657164364f4c38314d6c577a706d7469775943494750350a584b6e39695a745039656a7a4f384a38566d496c4d504e33653173614d75772b66396a4964722f500a2d2d2d2d2d454e442043455254494649434154452d2d2d2d2d0a at index 2 in signature set
+[33m[03d 12-19 08:27:48.63 UTC] [%{longpkg}] %{callpath} -> WARN[0m De-duplicating identity 0a074f7267314d535012aa062d2d2d2d2d424547494e2043455254494649434154452d2d2d2d2d0a4d4949434b6a43434164436741774942416749515466737132677a384e6f5741315a6d5a615a396f6f6a414b42676771686b6a4f50515144416a427a4d5173770a435159445651514745774a56557a45544d4245474131554543424d4b5132467361575a76636d3570595445574d4251474131554542784d4e5532467549455a790a5957356a61584e6a627a455a4d4263474131554543684d5162334a6e4d53356c654746746347786c4c6d4e76625445634d426f474131554541784d54593245750a62334a6e4d53356c654746746347786c4c6d4e7662544165467730784f4445794d546b774f4445324d444261467730794f4445794d5459774f4445324d4442610a4d477778437a414a42674e5642415954416c56544d524d77455159445651514945777044595778705a6d3979626d6c684d5259774641594456515148457731540a59573467526e4a68626d4e7063324e764d513877445159445651514c45775a6a62476c6c626e5178487a416442674e5642414d4d466b466b62576c75514739790a5a7a45755a586868625842735a53356a623230775754415442676371686b6a4f5051494242676771686b6a4f50514d4242774e43414154552b553950474f78480a636b585772723649773174423350656f466a5a3457335257772b76554638315036367871677a676f67616431384f314a59306e464f31734737564830754632360a727a365a78474a75354356486f303077537a414f42674e56485138424166384542414d434234417744415944565230544151482f424149774144417242674e560a48534d454a4441696743414a59542f41317a304d653172754a4639626a516a7754655a7943416b4e6c354f5172424e47544f34566444414b42676771686b6a4f0a5051514441674e4941444246416945413952516646343261334f505464374d68354f78707251685935657164364f4c38314d6c577a706d7469775943494750350a584b6e39695a745039656a7a4f384a38566d496c4d504e33653173614d75772b66396a4964722f500a2d2d2d2d2d454e442043455254494649434154452d2d2d2d2d0a at index 2 in signature set
+[33m[03e 12-19 08:27:48.63 UTC] [%{longpkg}] %{callpath} -> WARN[0m De-duplicating identity 0a074f7267314d535012aa062d2d2d2d2d424547494e2043455254494649434154452d2d2d2d2d0a4d4949434b6a43434164436741774942416749515466737132677a384e6f5741315a6d5a615a396f6f6a414b42676771686b6a4f50515144416a427a4d5173770a435159445651514745774a56557a45544d4245474131554543424d4b5132467361575a76636d3570595445574d4251474131554542784d4e5532467549455a790a5957356a61584e6a627a455a4d4263474131554543684d5162334a6e4d53356c654746746347786c4c6d4e76625445634d426f474131554541784d54593245750a62334a6e4d53356c654746746347786c4c6d4e7662544165467730784f4445794d546b774f4445324d444261467730794f4445794d5459774f4445324d4442610a4d477778437a414a42674e5642415954416c56544d524d77455159445651514945777044595778705a6d3979626d6c684d5259774641594456515148457731540a59573467526e4a68626d4e7063324e764d513877445159445651514c45775a6a62476c6c626e5178487a416442674e5642414d4d466b466b62576c75514739790a5a7a45755a586868625842735a53356a623230775754415442676371686b6a4f5051494242676771686b6a4f50514d4242774e43414154552b553950474f78480a636b585772723649773174423350656f466a5a3457335257772b76554638315036367871677a676f67616431384f314a59306e464f31734737564830754632360a727a365a78474a75354356486f303077537a414f42674e56485138424166384542414d434234417744415944565230544151482f424149774144417242674e560a48534d454a4441696743414a59542f41317a304d653172754a4639626a516a7754655a7943416b4e6c354f5172424e47544f34566444414b42676771686b6a4f0a5051514441674e4941444246416945413952516646343261334f505464374d68354f78707251685935657164364f4c38314d6c577a706d7469775943494750350a584b6e39695a745039656a7a4f384a38566d496c4d504e33653173614d75772b66396a4964722f500a2d2d2d2d2d454e442043455254494649434154452d2d2d2d2d0a at index 2 in signature set
+[33m[03f 12-19 08:27:48.70 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46106: rpc error: code = Canceled desc = context canceled
+[33m[040 12-19 08:27:48.71 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46108: rpc error: code = Canceled desc = context canceled
+[33m[041 12-19 08:27:50.91 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46132: rpc error: code = Canceled desc = context canceled
+[33m[042 12-19 08:27:51.11 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46134: rpc error: code = Canceled desc = context canceled
+[33m[043 12-19 08:27:51.68 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46136: rpc error: code = Canceled desc = context canceled
+[33m[044 12-19 08:27:51.89 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46138: rpc error: code = Canceled desc = context canceled
+[33m[045 12-19 08:27:52.09 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46140: rpc error: code = Canceled desc = context canceled
+[33m[046 12-19 08:27:52.29 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46142: rpc error: code = Canceled desc = context canceled
+[33m[047 12-19 08:27:52.50 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46144: rpc error: code = Canceled desc = context canceled
+[33m[048 12-19 08:27:52.70 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46146: rpc error: code = Canceled desc = context canceled
+[33m[049 12-19 08:27:52.91 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46148: rpc error: code = Canceled desc = context canceled
+[33m[04a 12-19 08:27:53.13 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46150: rpc error: code = Canceled desc = context canceled
+[33m[04b 12-19 08:27:53.35 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46152: rpc error: code = Canceled desc = context canceled
+[33m[04c 12-19 08:27:53.55 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46154: rpc error: code = Canceled desc = context canceled
+[33m[04d 12-19 08:27:53.82 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46156: rpc error: code = Canceled desc = context canceled
+[33m[04e 12-19 08:27:53.98 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46158: rpc error: code = Canceled desc = context canceled
+[33m[04f 12-19 08:27:54.27 UTC] [%{longpkg}] %{callpath} -> WARN[0m Error reading from 172.18.0.5:46160: rpc error: code = Canceled desc = context canceled
