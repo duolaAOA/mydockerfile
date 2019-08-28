@@ -1,0 +1,15 @@
+version: '2.0'
+services:
+
+  mongodb:
+    image: mongo:3.2
+    ports:
+      - 27017:27017
+    restart: on-failure:5
+    volumes:
+      - mongodb:/data/db:rw
+
+
+
+volumes:
+  mongodb: {}
